@@ -15,4 +15,6 @@ ADD rsyncd.secrets /etc/
 ADD rsync /etc/defaults/
 ADD /xinetd.d/rsync /etc/xinetd.d/
 
-ENTRYPOINT service ssh start && service xinetd start && bash
+EXPOSE 8200
+
+ENTRYPOINT service ssh start && service xinetd start && mono /app/duplicati/Duplicati.Server.exe --webservice-interface=any --server-datafolder=/config && bash
