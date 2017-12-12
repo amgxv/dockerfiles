@@ -31,7 +31,7 @@
 | Contenedor2  | basededatos | Base de datos. Servidor SSH. Cliente RSync  | 172.21.0.20/24  | [debian](https://store.docker.com/images/debian)
 | Contenedor3  | backups  | Servidor Backup Duplicati + RSync  |  172.21.0.30/24 | [linuxserver/duplicati](https://store.docker.com/community/images/linuxserver/duplicati) |
 
-#### Usuarios
+#### USUARIOS
 
 | Usuario  | Contraseña  | Grupo  |
 |---|---|---|
@@ -59,3 +59,26 @@
 | Backup Cloud | Duplicati   |
 
 ---
+
+# USO
+
+#### USO DE LOS SCRIPTS
+En principio, los scripts cuentan con los permisos suficientes para ser ejecutados, bastaría con ejecutar `./script.sh` en la carpeta `dockerfiles` para que cree toda la estructura.
+
+###### EXPLICACIÓN SCRIPTS
+
+- `./ronyosa.sh` - Crea toda la estructura de la empresa
+- `./remove_ronyosa_all.sh` - Borra toda la estructura creada
+- `./remove_ronyosa_rm.sh` - Borra los contenedores, pero deja las imágenes
+
+#### USO DE LOS CONTENEDORES
+Para acceder a los contenedores en modo interactivo es necesario ejecutar :
+`docker exec -it nombrecontenedor bash`, así entraremos al bash y podremos interactuar con el contenedor.
+
+###### NOMBRES CONTENEDORES
+
+| Contenedor  |  Nombre  |
+|---|---|
+| Contenedor1  | ronyosa_web  |
+| Contenedor2  | ronyosa_bd  |
+| Contenedor3  | ronyosa_backup  |
