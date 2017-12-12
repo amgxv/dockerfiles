@@ -16,21 +16,19 @@
 
 - Servidor DNS
 
-- Añadir scripts a GitHub
-
 ---
 
 #### ESTRUCTURA
 
 | Red Principal |
-|---|
-| 172.21.0.0/24 |
+|---|---|---|
+| 172.21.0.0/24  |
 
 
 | Contenedor  | Nombre Carpeta | Contenido  | IP  | Base |
 |---|---|---|---|---|
 | Contenedor1  | ftplightwebssh  |  Servidor FTP. Servidor SSH. Servidor Web con PHP. Cliente RSync. | 172.21.0.10/24  | [debian](https://store.docker.com/images/debian) |
-| Contenedor2  | basededatos | Base de datos. Servidor SSH. Cliente RSync  | 172.21.0.20/24  | [debian](https://store.docker.com/images/debian) |
+| Contenedor2  | basededatos | Base de datos. Servidor SSH. Cliente RSync  | 172.21.0.20/24  | [debian](https://store.docker.com/images/debian)
 | Contenedor3  | backups  | Servidor Backup Duplicati + RSync  |  172.21.0.30/24 | [linuxserver/duplicati](https://store.docker.com/community/images/linuxserver/duplicati) |
 
 #### Usuarios
