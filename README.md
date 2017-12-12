@@ -9,9 +9,6 @@
 - Revisar permisos de FTP y SFTP.
   - SFTP solo permitir usuario root/syadmin  
 
-
-- Editar la web y añadir un botón para testear la base de datos
-
 - Usar crontab para hacer las copias remotas al servidor de backups
 
 - Servidor DNS
