@@ -20,7 +20,7 @@
   <?php
 
 
-pg_connect("dbname=northwind user=postgres password=123 host=172.17.0.5") or die("Couldn't Connect: ".pg_last_error());
+pg_connect("dbname=northwind user=postgres password=123 host=172.21.0.20") or die("Couldn't Connect: ".pg_last_error());
 
 $query = 'SELECT * FROM orders';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
